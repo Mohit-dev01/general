@@ -159,7 +159,10 @@ const Navbar = () => {
             </div>
           </div>
           <span className="font-bold text-white text-lg font-playfair tracking-wide">
-            Hasten <span className="text-indigo-400">Immigration</span>
+            {import.meta.env.VITE_CONSULTANCY_FIRST_NAME}{" "}
+            <span className="text-indigo-400">
+              {import.meta.env.VITE_CONSULTANCY_LAST_NAME}
+            </span>
           </span>
         </a>
 
