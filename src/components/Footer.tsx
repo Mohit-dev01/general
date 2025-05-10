@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Globe,
   Facebook,
@@ -10,6 +10,7 @@ import {
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [showPhone, setShowPhone] = useState(false);
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -160,9 +161,24 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400">
-          <p>
+          <p className="flex flex-col md:flex-row items-center justify-center gap-2">
             © {currentYear} {import.meta.env.VITE_CONSULTANCY_NAME}. All rights
             reserved.
+            <span className="ml-2">
+              Made with ❤️ by{" "}
+              <span
+                className="relative inline-block cursor-pointer text-indigo-400 hover:text-indigo-300 transition-colors"
+                onMouseEnter={() => setShowPhone(true)}
+                onMouseLeave={() => setShowPhone(false)}
+              >
+                Mohit
+                {showPhone && (
+                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs whitespace-nowrap z-10">
+                    <a href="tel:9660049057">9660049057</a>
+                  </span>
+                )}
+              </span>
+            </span>
           </p>
         </div>
       </div>
