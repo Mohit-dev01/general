@@ -10,6 +10,7 @@ import UniversityPartners from "@/components/UniversityPartners";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Instagram from "@/components/Instagram";
 
 const Index = () => {
   // Add scroll animation effects
@@ -66,6 +67,9 @@ const Index = () => {
       </div>
       <div className="animate-on-scroll">
         <Testimonials />
+      </div>
+      <div className="animate-on-scroll">
+        <Instagram />
       </div>
       <div className="animate-on-scroll">
         <Contact />
