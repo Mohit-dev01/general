@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import VisaCounter from "@/components/VisaCounter";
@@ -8,9 +7,9 @@ import About from "@/components/About";
 import Gallery from "@/components/Gallery";
 import UniversityPartners from "@/components/UniversityPartners";
 import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import Instagram from "@/components/Instagram";
+import Contact from "@/components/Contact";
+import OwnerSection from "@/components/OwnerSection";
 
 const Index = () => {
   // Add scroll animation effects
@@ -40,14 +39,7 @@ const Index = () => {
   }, []);
 
   return (
-    <motion.div
-      className="min-h-screen bg-gray-950 text-white"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <Navbar />
+    <>
       <Hero />
       <div className="animate-on-scroll">
         <Services />
@@ -57,6 +49,9 @@ const Index = () => {
       </div>
       <div className="animate-on-scroll">
         <About />
+      </div>
+      <div className="animate-on-scroll">
+        <OwnerSection />
       </div>
       <div className="animate-on-scroll">
         <Gallery />
@@ -74,8 +69,7 @@ const Index = () => {
       <div className="animate-on-scroll">
         <Contact />
       </div>
-      <Footer />
-    </motion.div>
+    </>
   );
 };
 
